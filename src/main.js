@@ -21,10 +21,24 @@ const app = createApp(App);
 app.use(anu, {
   registerComponents: false,
   initialTheme: "dark",
-  class: "a-theme-coffee",
-  coffee: {
-    colors: {
-      primary: "27, 39%, 77%",
+  themes: {
+    light: {
+      colors: {
+        primary: "32.9,100%,50%",
+      },
+      cssVars: {
+        "body-bg-c": "1.8%,95.9%",
+        "surface-c": "0, 0%, 100%",
+      },
+    },
+    dark: {
+      colors: {
+        primary: "40.7,96.8%,62.9%",
+      },
+      cssVars: {
+        "body-bg-c": "var(--a-primary-hue), 15%, 5%",
+        "surface-c": "var(--a-primary-hue), 7%, 10%",
+      },
     },
   },
 });

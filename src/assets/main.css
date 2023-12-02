@@ -1,9 +1,28 @@
 @import "./base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  width: 100%;
+  min-height: 100vh;
+}
 
-  font-weight: normal;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.content {
+  flex: 1; /* Занимает всю доступную высоту между header и footer */
+}
+
+.footer {
+  margin-top: auto; /* Поднимает footer вниз, чтобы прикрепить его к нижней части страницы */
 }
