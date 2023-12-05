@@ -5,15 +5,15 @@
         <div class="mr-10">
           <h1 class="header__title"><span>Bayastan</span> Kenenov</h1>
         </div>
-        <ul class="flex flex-grow items-center gap-4">
+        <ul class="flex items-center gap-4">
           <li class="header__list">
             <router-link to="/">Works</router-link>
           </li>
           <li class="header__list">
-            <router-link to="/">Posts</router-link>
+            <router-link to="/">About</router-link>
           </li>
           <li class="header__list">
-            <router-link to="/">Uses</router-link>
+            <router-link to="/">Skills</router-link>
           </li>
           <li class="header__list">
             <router-link to="/">Source</router-link>

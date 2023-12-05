@@ -6,7 +6,7 @@
   import Planet from "./PlanetModel.vue";
 
   const gl = {
-    clearColor: "#11101B",
+    clearColor: "#0f0d0b",
     shadows: true,
     alpha: false,
     outputColorSpace: SRGBColorSpace,
@@ -15,7 +15,7 @@
 </script>
 
 <template>
-  <TresCanvas v-bind="gl">
+  <TresCanvas class="planet-canvas" v-bind="gl">
     <TresPerspectiveCamera
       :position="[0, 1, 5]"
       :fov="75"
@@ -44,3 +44,11 @@
     />
   </TresCanvas>
 </template>
+
+<style>
+  .planet-canvas {
+    position: absolute !important;
+    left: auto !important;
+    right: -25% !important;
+  }
+</style>

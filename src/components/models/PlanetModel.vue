@@ -1,6 +1,4 @@
 <script setup>
-  import Airplane from "./AirplaneModel.vue";
-  import Cloud from "./CloudModel.vue";
   import { useGLTF } from "@tresjs/cientos";
   import { useRenderLoop } from "@tresjs/core";
 
@@ -9,7 +7,6 @@
   );
 
   const planet = nodes.Planet;
-  const icosphere = nodes.Icosphere;
   planet.traverse((child) => {
     if (child.isMesh) {
       child.receiveShadow = true;
@@ -28,11 +25,5 @@
 </script>
 
 <template>
-  <primitive :object="planet" />
-  <Airplane :planet="icosphere" />
-  <Cloud
-    v-for="cloud of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
-    :key="cloud"
-    :planet="icosphere"
-  />
+  <primitive :object="planet" :scale="2.25" />
 </template>
