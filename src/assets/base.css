@@ -8,6 +8,7 @@
 
 body {
   min-height: 100vh;
+  color: white !important;
   transition:
     color 0.5s,
     background-color 0.5s;
