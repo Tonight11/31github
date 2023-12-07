@@ -25,6 +25,7 @@ app.use(anu, {
     light: {
       colors: {
         primary: "32.9,100%,50%",
+        secondary: "110 231 183",
       },
       cssVars: {
         "body-bg-c": "1.8%,95.9%",
@@ -34,6 +35,7 @@ app.use(anu, {
     dark: {
       colors: {
         primary: "40.7,96.8%,62.9%",
+        secondary: "110 231 183",
       },
       cssVars: {
         "body-bg-c": "var(--a-primary-hue), 15%, 5%",
