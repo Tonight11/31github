@@ -183,7 +183,8 @@
     }
 
     &__main-text {
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 700;
     }
 
     &__top {
@@ -199,7 +200,7 @@
     &__text {
       // max-width: 400px;
       margin-bottom: 20px;
-      font-size: 22px;
+      font-size: 18px;
     }
 
     &__tags {

@@ -37,12 +37,12 @@
     }
 
     &__title {
-      font-size: 64px;
+      font-size: 48px;
       margin-bottom: 20px;
     }
 
     &__subtitle {
-      font-size: 32px;
+      font-size: calc(48px / 1.618);
 
       & span {
         color: hsl(var(--a-primary));
