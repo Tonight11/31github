@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <BooksIcon class="about__books" />
     <div class="container">
       <div class="about__inner">
         <div class="about__info">
@@ -32,11 +33,18 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  import BooksIcon from "@/components/icon/BooksIcon.vue";
+</script>
 
 <style lang="scss" scoped>
   .about {
     padding-top: 100px;
+
+    &__books {
+      margin: 0 auto;
+      animation: move 3s infinite linear;
+    }
     &__inner {
       display: flex;
     }
@@ -59,6 +67,24 @@
     }
 
     &__img {
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate(20px, 0);
+    }
+    25% {
+      transform: translate(20px, -20px);
+    }
+    50% {
+      transform: translate(-20px, -20px);
+    }
+    75% {
+      transform: translate(-20px, 0);
+    }
+    100% {
+      transform: translate(20px, 0);
     }
   }
 </style>
