@@ -1,10 +1,11 @@
 <script setup>
   import DefaultLayout from "@/layouts/DefaultLayout.vue";
+  import WorksLayout from "@/layouts/WorksLayout.vue";
   import { useRoute } from "vue-router";
   import { computed } from "vue";
 
   const route = useRoute();
-  const layouts = { DefaultLayout };
+  const layouts = { DefaultLayout, WorksLayout };
 
   const layout = computed(() => route.meta.layout);
 </script>
@@ -15,9 +16,4 @@
   </component>
 </template>
 
-<style scoped>
-body {
-  width: 100%;
-  height: 100%;
-} 
-</style>
+<style scoped></style>

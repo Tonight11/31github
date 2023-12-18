@@ -12,10 +12,17 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/about",
-      name: "about",
-      meta: { layout: "DefaultLayout" },
-      component: () => import("../views/AboutView.vue"),
+      path: "/works",
+      name: "works",
+      meta: { layout: "WorksLayout" },
+      component: () => import("../views/works/WorksView.vue"),
+    },
+    {
+      path: "/works/:id",
+      name: "work",
+      meta: { layout: "WorksLayout" },
+      props: true,
+      component: () => import("../views/works/WorkItemView.vue"),
     },
   ],
 });

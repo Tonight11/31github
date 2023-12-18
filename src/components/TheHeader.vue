@@ -3,11 +3,13 @@
     <div class="container">
       <div class="header__inner">
         <div class="mr-10">
-          <h1 class="header__title"><span>Bayastan</span> Kenenov</h1>
+          <h1 class="header__title">
+            <router-link to="/"> <span>Bayastan</span> Kenenov</router-link>
+          </h1>
         </div>
         <ul class="flex items-center gap-4">
           <li class="header__list">
-            <router-link to="/">Works</router-link>
+            <router-link to="/works">Works</router-link>
           </li>
           <li class="header__list">
             <router-link to="/">About</router-link>
