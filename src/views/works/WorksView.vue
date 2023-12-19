@@ -1,7 +1,14 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="works-page">
+    <div class="works-page__container container">
+      <div class="works-page__title">Проекты</div>
+      <WorksItems />
+    </div>
   </div>
 </template>
+
+<script setup>
+  import WorksItems from "../../components/WorksItems.vue";
+</script>
 
 <style></style>

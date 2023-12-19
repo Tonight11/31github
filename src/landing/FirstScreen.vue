@@ -1,6 +1,5 @@
 <template>
   <div class="flex-col flex h100vh">
-    <TheHeader />
     <div class="container">
       <div class="first-screen">
         <div class="first-screen__info">
@@ -19,7 +18,6 @@
 </template>
 
 <script setup>
-  import TheHeader from "@/components/TheHeader.vue";
   import RoomModel from "@/components/models/RoomModel.vue";
 </script>
 

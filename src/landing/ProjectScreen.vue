@@ -103,6 +103,7 @@
   }
 
   .projects {
+    margin-top: 100px;
     &__chess {
       margin: 0 auto;
       animation: rotate 3s infinite linear;
