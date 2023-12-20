@@ -3,8 +3,8 @@
     <div class="container">
       <div class="first-screen">
         <div class="first-screen__info">
-          <div class="first-screen__title">Привет, 👋</div>
-          <div class="first-screen__subtitle">
+          <div class="first-screen__title animate">Привет, 👋</div>
+          <div class="first-screen__subtitle animate">
             Я <span>Баястан</span>, сын Баястана, <br />
             фронтенд-разработчик и simple guy
           </div>
@@ -19,6 +19,42 @@
 
 <script setup>
   import RoomModel from "@/components/models/RoomModel.vue";
+  import gsap from "gsap";
+  import { onMounted } from "vue";
+
+  const animateInfo = () => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      ".animate",
+      {
+        opacity: 0,
+        y: 100,
+        autoAlpha: 0,
+        stagger: {
+          each: 0.2,
+          from: "top",
+          ease: "power2.inOut",
+        },
+      },
+      {
+        opacity: 1,
+        y: 0,
+        autoAlpha: 1,
+        delay: 1.5,
+        duration: 1,
+        ease: "power4.out",
+        stagger: {
+          each: 0.2,
+          from: "top",
+          ease: "power2.inOut",
+        },
+      },
+    );
+  };
+
+  onMounted(() => {
+    animateInfo();
+  });
 </script>
 
 <style lang="scss" scoped>

@@ -1,15 +1,42 @@
 <script setup>
   import TheHeader from "./components/TheHeader.vue";
   import TheFooter from "./components/TheFooter.vue";
-  // import DefaultLayout from "@/layouts/DefaultLayout.vue";
-  // import WorksLayout from "@/layouts/WorksLayout.vue";
-  // import { useRoute } from "vue-router";
-  // import { computed } from "vue";
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
 
-  // const route = useRoute();
-  // const layouts = { DefaultLayout, WorksLayout };
+  import { onMounted } from "vue";
 
-  // const layout = computed(() => route.meta.layout);
+  const animateTitle = () => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      ".title",
+      {
+        scrollTrigger: {
+          trigger: ".title",
+          scrub: true,
+          start: "50% top",
+          markers: true,
+          invalidateOnResize: true,
+        },
+        opacity: 0,
+        y: -250,
+        autoAlpha: 0,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        autoAlpha: 1,
+        delay: 1,
+        duration: 1,
+        ease: "bounce.out",
+      },
+    );
+  };
+
+  onMounted(() => {
+    animateTitle();
+  });
 </script>
 
 <template>
