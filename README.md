@@ -1,6 +1,10 @@
 # 31ghchallenge
 
 Portfolio() 
+Done first page:
+-hero
+-projects
+-about me
 
 ## For 31 githubchallenge
 
