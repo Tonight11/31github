@@ -5,6 +5,8 @@ Done first page:
 -hero
 -projects
 -about me
+Doing:
+-second page(project page) 
 
 ## For 31 githubchallenge
 
