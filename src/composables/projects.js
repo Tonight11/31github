@@ -1,5 +1,6 @@
 export default [
   {
+    id: 1,
     icon: "src/assets/project/bimlib-logo.svg",
     title: "BimLib",
     date: "2023-настоящее время",
@@ -15,6 +16,7 @@ export default [
     ],
   },
   {
+    id: 2,
     icon: "src/assets/project/market-logo.svg",
     title: "Market-Data",
     date: "2021-2022",
@@ -29,8 +31,8 @@ export default [
       "src/assets/project/md-2.jpg",
     ],
   },
-
   {
+    id: 3,
     icon: "src/assets/project/msk-logo.png",
     title: "MskVolley",
     date: "2021-2022",

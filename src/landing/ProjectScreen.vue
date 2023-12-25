@@ -3,7 +3,7 @@
     <ChessIcon class="projects__chess" />
     <div class="container">
       <div class="projects__inner">
-        <div class="projects__title title">Проекты</div>
+        <div ref="projectTitle" class="projects__title title">Проекты</div>
         <div class="projects__main">
           <div class="projects__row">
             <div
@@ -55,7 +55,11 @@
   import "vue3-carousel/dist/carousel.css";
   import { Carousel, Slide, Pagination } from "vue3-carousel";
   import myProjects from "@/composables/projects.js";
+  import { useAnimationTitle } from "../composables/useAnimateTitle";
+  import { ref } from "vue";
 
+  const projectTitle = ref();
+  useAnimationTitle(projectTitle);
   const getRandomColor = () => {
     const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
     return randomColor;

@@ -3,6 +3,7 @@ import "./assets/main.css";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import { anu } from "anu-vue";
+import { MotionPlugin } from "@vueuse/motion";
 
 // UnoCSS import
 import "uno.css";
@@ -45,6 +46,7 @@ app.use(anu, {
   },
 });
 app.use(createPinia());
+app.use(MotionPlugin);
 app.use(router);
 
 app.mount("#app");

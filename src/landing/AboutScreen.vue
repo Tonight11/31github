@@ -4,7 +4,7 @@
     <div class="container">
       <div class="about__inner">
         <div class="about__info">
-          <div class="about__title title">Обо мне</div>
+          <div ref="aboutTitle" class="about__title title">Обо мне</div>
           <div class="about__text">
             <span
               >На протяжении последних четырех лет занимаюсь разработкой
@@ -35,6 +35,11 @@
 
 <script setup>
   import BooksIcon from "@/components/icon/BooksIcon.vue";
+  import { useAnimationTitle } from "../composables/useAnimateTitle";
+  import { ref } from "vue";
+
+  const aboutTitle = ref();
+  useAnimationTitle(aboutTitle);
 </script>
 
 <style lang="scss" scoped>
