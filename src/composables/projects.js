@@ -1,3 +1,15 @@
+import bim1 from "@/assets/project/bm-1.png";
+import bim2 from "@/assets/project/bm-2.png";
+import bim3 from "@/assets/project/bm-3.png";
+
+import msk1 from "@/assets/project/msk-1.png";
+import msk2 from "@/assets/project/msk-2.png";
+import msk3 from "@/assets/project/msk-3.png";
+
+import md1 from "@/assets/project/md-1.jpg";
+import md2 from "@/assets/project/md-2.jpg";
+import md3 from "@/assets/project/md3.png";
+
 export default [
   {
     id: 1,
@@ -8,12 +20,9 @@ export default [
     short_text:
       "Профессиональная площадка для производителей, заказчиков, инженеров-проектировщиков...",
     tags: ["Frontend", "Middle"],
+    stack: ["Nuxt", "Vue", "Vuetify", "Pinia", "TS", "Quasar"],
     link: "/project/1",
-    img: [
-      "src/assets/project/bm-1.png",
-      "src/assets/project/bm-2.png",
-      "src/assets/project/bm-3.png",
-    ],
+    img: [bim1, bim2, bim3],
   },
   {
     id: 2,
@@ -24,12 +33,9 @@ export default [
     short_text:
       "Высокоточный сервис внутренней аналитики, который поможет вам продавать на Wildberries...",
     tags: ["Frontend", "Junior", "Co-Designer"],
+    stack: ["Vue 3", "Vuex", "SCSS", "ApexChart"],
     link: "/project/2",
-    img: [
-      "src/assets/project/md3.png",
-      "src/assets/project/md-1.jpg",
-      "src/assets/project/md-2.jpg",
-    ],
+    img: [md3, md2, md1],
   },
   {
     id: 3,
@@ -40,11 +46,8 @@ export default [
     short_text:
       "Платформа принимает заявки от команд на старт чемпионата, координирует проведение матчей...",
     tags: ["Frontend", "Junior"],
+    stack: ["Vue", "Vuetify", "Vuex", "VueDataTable"],
     link: "/project/3",
-    img: [
-      "src/assets/project/msk-1.png",
-      "src/assets/project/msk-2.png",
-      "src/assets/project/msk-3.png",
-    ],
+    img: [msk1, msk2, msk3],
   },
 ];
