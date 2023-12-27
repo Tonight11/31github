@@ -7,13 +7,15 @@
         class="works__column"
       >
         <div class="works__item">
-          <img :src="project.img[0]" :alt="project.title" />
+          <div class="works__img">
+            <img :src="project.img[0]" :alt="project.title" />
+          </div>
           <div class="works__top">
             <div class="works__name">{{ project.title }}</div>
           </div>
           <div class="works__short_text">{{ project.short_text }}</div>
           <router-link :to="`works/${project.id}`" class="works__btn">
-            Подробнее
+            Подробнее 🏹
           </router-link>
         </div>
       </div>
@@ -47,13 +49,25 @@
       height: 100%;
 
       text-align: center;
+    }
+
+    &__img {
+      border-radius: 11px;
+
+      height: 150px;
+      overflow: hidden;
       & img {
         width: 100%;
-        height: 150px;
+        height: 100%;
         object-fit: cover;
 
-        border-radius: 11px;
         margin-bottom: 10px;
+
+        transition: all 0.3s linear;
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
 

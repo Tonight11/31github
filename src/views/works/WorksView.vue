@@ -1,7 +1,7 @@
 <template>
   <div class="works-page">
     <div class="works-page__container container">
-      <div class="works-page__title">Проекты</div>
+      <div class="works-page__title title">Проекты</div>
       <WorksItems />
     </div>
   </div>
