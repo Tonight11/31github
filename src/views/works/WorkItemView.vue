@@ -7,7 +7,7 @@
         >Works</router-link
       >
       <span>></span>
-      <h2 class="font-['M_PLUS_Rounded_1c'] text-xl font-bold">
+      <h2 class="text-xl font-bold">
         {{ project.title }}
       </h2>
     </div>
@@ -24,7 +24,7 @@
         <span>{{ project.stack.join(", ") }}</span>
       </li>
     </ul>
-    <img v-for="img in project.img" :key="img" :src="img" />
+    <img v-for="img in project.img" :key="img" class="mb-2" :src="img" />
   </div>
 </template>
 

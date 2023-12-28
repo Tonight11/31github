@@ -13,16 +13,33 @@
             >
               <div class="projects__info">
                 <div class="projects__top">
-                  <img :src="project.icon" class="projects__icon" />
-                  <div class="projects__main-text">{{ project.title }}</div>
+                  <img
+                    v-motion-slide-visible-once-top
+                    :delay="200"
+                    :src="project.icon"
+                    class="projects__icon"
+                  />
+                  <div
+                    v-motion-slide-visible-once-top
+                    :delay="200"
+                    class="projects__main-text"
+                  >
+                    {{ project.title }}
+                  </div>
                 </div>
-                <div class="projects__text">
+                <div
+                  v-motion-slide-visible-once-top
+                  :delay="200"
+                  class="projects__text"
+                >
                   {{ project.text }}
                 </div>
                 <div class="projects__tags">
                   <div
                     v-for="tag in project.tags"
                     :key="tag"
+                    v-motion-slide-visible-once-top
+                    :delay="200"
                     class="projects__tag"
                     :style="{ borderColor: getRandomColor() }"
                   >
@@ -31,7 +48,13 @@
                 </div>
                 <router-link :to="project.link">Подробнее</router-link>
               </div>
-              <div class="swiper">
+              <div
+                v-motion
+                :initial="{ opacity: 0, x: 100 }"
+                :visibleOnce="{ opacity: 1, x: 0, scale: 1 }"
+                :delay="200"
+                class="swiper"
+              >
                 <Carousel :autoplay="2000" :wrap-around="true">
                   <Slide v-for="slide in project.img" :key="slide">
                     <img class="carousel__item" :src="slide" alt="" />
