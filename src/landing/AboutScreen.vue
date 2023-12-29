@@ -5,7 +5,7 @@
       <div class="about__inner">
         <div class="about__info">
           <div ref="aboutTitle" class="about__title title">Обо мне</div>
-          <div class="about__text">
+          <div v-motion-slide-visible-once-top class="about__text">
             <span
               >На протяжении последних четырех лет занимаюсь разработкой
               IT-продуктов.
@@ -25,7 +25,13 @@
             Нравится Figma, VS Code, Vut, Nuxt, Notion.
           </div>
         </div>
-        <div class="about__img">
+        <div
+          v-motion
+          :initial="{ opacity: 0, x: 100 }"
+          :visibleOnce="{ opacity: 1, x: 0, scale: 1 }"
+          :delay="200"
+          class="about__img"
+        >
           <img src="@/assets/me.png" alt="me" />
         </div>
       </div>
