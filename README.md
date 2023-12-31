@@ -5,8 +5,9 @@ Done first page:
 -hero
 -projects
 -about me
--peojects page
+-projects page
 -single project page
+-animation 
 Doing:
 -stack
 
